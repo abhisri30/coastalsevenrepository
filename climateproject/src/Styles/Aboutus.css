@@ -1,0 +1,46 @@
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background: #f2f6ff;
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-box {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.about-box h1 {
+  color: #003366;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.about-box h2 {
+  margin-top: 30px;
+  color: #2e7d32;
+  font-size: 20px;
+}
+
+.about-box p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 10px 0;
+  color: #333;
+}

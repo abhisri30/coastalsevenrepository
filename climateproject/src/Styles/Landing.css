@@ -1,0 +1,74 @@
+/* Base styles for body, html, and root */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Landing page container */
+.landing-page {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Centering content */
+.landing-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background image */
+.landing-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(4px);
+}
+
+/* Overlay text container */
+.typing-overlay {
+  position: relative;
+  text-align: center;
+  transform: translateY(-40px); /* Move all text upward */
+  margin-left: 50px;
+}
+
+/* Common line styling */
+.typed-line {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* Line 1: Welcome to - light white */
+.typed-line.line-welcome {
+  font-size: 42px;
+  color: rgba(255, 255, 255, 0.85);
+  /* text-shadow removed */
+}
+
+/* Line 2: Coastal Seven Consulting - large white text */
+.typed-line.line-name {
+  font-size: 40px;
+  color: #ffffff;
+  /* text-shadow removed */
+  margin-top: 5px;
+}
+
+/* Line 3: Are you ready? - teal */
+.typed-line.line-ready {
+  font-size: 40px;
+  color: #00b3b3;
+  /* text-shadow removed */
+  margin-top: 20px;
+}

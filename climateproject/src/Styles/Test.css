@@ -1,0 +1,79 @@
+.test-container {
+  display: flex;
+  height: 100vh;
+  background-color: #071e29;
+  overflow: hidden;
+}
+
+.left-panel {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.typing-overlay {
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.typed-line {
+  margin-bottom: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line-welcome {
+  font-size: 24px;
+  color: #ccc;
+}
+
+.line-name {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.line-ready {
+  font-size: 24px;
+  color: #00c6ad;
+}
+
+.right-panel {
+  width: 60%;
+  position: relative;
+}
+
+#chartdiv {
+  width: 100%;
+  height: 100%;
+}
+
+.black-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+.test-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* If your NavBar has a fixed height, say 60px */
+.test-container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Make sure no internal div causes scroll */
+.left-panel, .right-panel {
+  overflow: hidden;
+}

@@ -1,0 +1,155 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main container with background */
+.continent-page {
+  background-color: #01161e; /* Dark teal */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+/* Top navigation bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #01161e; /* Match page background */
+  color: teal;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  height: 60px;
+}
+
+/* Back button */
+.back-button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.back-button:hover {
+  background-color: #01303f;
+  color: white;
+}
+
+/* Tabs */
+.tabs button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #00ffff; /* Aqua for tabs */
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tabs .active {
+  border-bottom: 2px solid #00ffff;
+  color: #00ffff;
+  font-weight: bold;
+}
+
+/* Main content */
+.content-container {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* Image container */
+.image-container {
+  flex: 1;
+}
+
+/* Image styling */
+.continent-image {
+  padding-top: 50px;
+  display: block;
+  margin: 40px auto 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 60%;
+  min-height: 300px;
+  text-align: center;
+  padding: 30px 20px 20px 20px;
+  background: #021922;
+  color: white;
+  border-radius: 12px;
+  animation: fadeIn 1s ease-in-out;
+  gap: 10px;
+}
+
+.sidebar h2 {
+  color: white;
+  font-size: 1.6rem;
+  border-bottom: 2px solid white;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar p {
+  color: #f0f8ff;
+  font-size: 1rem;
+}
+
+/* Typing and title animations */
+.continent-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  animation: fadeInDown 0.8s ease-in;
+}
+
+.typing-text {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+.typing-text p {
+  margin: 4px 0;
+  white-space: pre-wrap;
+  animation: fadeIn 0.4s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
