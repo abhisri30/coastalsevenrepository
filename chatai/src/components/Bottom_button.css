@@ -1,0 +1,88 @@
+/* Reusable Bottom Button Styling */
+.bottom-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem; /* Default padding for expanded state */
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 0.9rem; /* Adjusted for better fit */
+  cursor: pointer;
+  border-radius: 50px; /* Default pill shape for expanded */
+  transition: background-color 0.3s, padding 0.3s, border-radius 0.3s, width 0.2s ease;
+  width: 100%; /* Take full width of its container in .bottom-section */
+  text-align: left;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.bottom-button:hover {
+  background-color: rgb(6, 41, 53); /* Darker cyan hover */
+}
+
+.bottom-button .icon {
+  font-size: 1.1rem; /* Icon size */
+  width: 1.5rem;   /* Icon container width */
+  height: 1.5rem;  /* Icon container height */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.bottom-button .label {
+  white-space: nowrap; /* Prevent label from wrapping */
+  overflow: hidden;    /* Hide overflow if any */
+  text-overflow: ellipsis; /* Add ellipsis if text is too long (though sidebar usually wide enough) */
+}
+
+/* Adjustments when the parent .sidebar has .collapsed class */
+/* These styles are applied when isExtended prop is false */
+.sidebar.collapsed .bottom-section .bottom-button {
+  padding: 0.6rem; /* Padding for icon-only */
+  justify-content: center;
+  border-radius: 50%; /* Circular button */
+  width: auto; /* Fit content (icon + padding) */
+  min-width: calc(1.5rem + 1.2rem); /* Icon width (1.5rem) + padding on both sides (0.6rem * 2) */
+  align-self: center; /* Center button in the collapsed sidebar's bottom-section */
+}
+
+.sidebar.collapsed .bottom-section .bottom-button .label {
+  display: none; /* Hide label when sidebar is collapsed */
+}
+
+/* Styles for when sidebar is extended (default state or .sidebar.extended) */
+/* These styles are applied when isExtended prop is true */
+.sidebar.extended .bottom-section .bottom-button {
+  padding: 0.6rem 1rem;
+  justify-content: flex-start;
+  border-radius: 40px; /* Pill shape */
+  width: 100%;
+}
+
+.sidebar.extended .bottom-section .bottom-button .label {
+  display: inline; /* Show label when sidebar is extended */
+}
+
+/* Responsive Media Queries: These override based on screen size */
+/* On tablets and smaller screens, force icon-only view for bottom buttons,
+   regardless of the sidebar's isExtended state. */
+@media (max-width: 768px) {
+  /* Targets all .bottom-button instances within ANY .sidebar on smaller screens */
+  .sidebar .bottom-section .bottom-button {
+    padding: 0.6rem !important; /* Using !important to ensure override */
+    justify-content: center !important;
+    border-radius: 50% !important; /* Circular shape */
+    width: auto !important; /* Fit content */
+    min-width: calc(1.5rem + 1.2rem) !important;
+    align-self: center !important;
+  }
+
+  .sidebar .bottom-section .bottom-button .label {
+    display: none !important; /* Force hide label */
+  }
+}
+/* Note: The @media (max-width: 600px) rule from your original CSS was largely redundant
+   if the 768px (or 900px) rule already enforces icon-only display.
+   If specific adjustments for <600px are needed beyond what 768px provides, they can be added.
+*/
